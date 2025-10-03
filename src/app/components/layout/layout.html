@@ -1,1 +1,23 @@
-<p>layout works!</p>
+<!-- Cabecera -->
+<header class="header">
+  <div class="header-left">
+    <div class="logo">*</div>
+    <H1>Panel Administrativo</H1>
+  </div>
+
+  <div class="header-right">
+    <span class="user-name">{{ usuario?.nombre || 'Usuario' }}</span>
+    <span class="user-role">{{ usuario?.rol || 'Rol desconocido' }}</span>
+    <button class="logout-btn" (click)="cerrarSesion()">Cerrar Sesión</button>
+  </div>
+</header>
+
+<!-- Barra de Navegación -->
+<nav class="navbar">
+  <a routerLink="/usuarios" routerLinkActive="active"> Usuarios</a>
+  <a routerLink="/roles" routerLinkActive="active"> Roles</a>
+</nav>
+
+<main class="content">
+  <router-outlet></router-outlet>
+</main>
