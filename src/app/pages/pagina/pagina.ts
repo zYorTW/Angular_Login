@@ -14,7 +14,7 @@ export class InicioComponent {
   usuario: any;
 
   constructor(private authService: AuthService, private router: Router) {
-    this.usuario = this.authService.ObtenerUsuario();
+    this.usuario = this.authService.obtenerUsuario();
   }
 
   cerrarSesion() {

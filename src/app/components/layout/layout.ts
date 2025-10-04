@@ -17,7 +17,7 @@ export class Layout {
 
   // Se inyecta el servicio Authservices y Router
   constructor(private auth: AuthService, private router: Router) {
-    this.usuario = this.auth.ObtenerUsuario(); // Obtiene el usuario guardado en localStorage
+    this.usuario = this.auth.obtenerUsuario(); // Obtiene el usuario guardado en localStorage
   }
 
   cerrarSesion() {
