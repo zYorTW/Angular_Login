@@ -70,7 +70,7 @@ export class UsuariosComponent implements OnInit {
 
   cargarPermisos() {
     if (!this.usuarioForm.id_rol) return;
-    this.rolesService.obtenerRolInfo(this.usuarioForm.id_rol).subscribe({
+    this.rolesService.obtenerRolPorId(this.usuarioForm.id_rol).subscribe({
       next: (rol: any) => {
         this.permisosRolSeleccionado = rol.permisos
           ? rol.permisos.map((p: any) => p.nombre)
